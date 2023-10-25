@@ -1,0 +1,7 @@
+docker exec -i mysql_container mysql -uroot -psecret database < database_backup.sql
+
+docker exec -i db mysql -uroot -pMYSQL_ROOT_PASSWORD sample_db < Database/Sample-SQL-File-10-Rows.sql
+
+
+# Command for import dump file into database docker container # (cd to database folder first)
+Get-Content Sample-SQL-File-10-Rows.sql | docker exec -i db mysql -uroot -pdoraemon123 sample_db

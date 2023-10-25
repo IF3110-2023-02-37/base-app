@@ -1,0 +1,167 @@
+@import "global.css";
+
+.container {
+  min-height: 100vh;
+  max-width: 100vw;
+  background: var(--blue100);
+}
+
+
+.main-container {
+  padding-top: 6rem;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.welcome-container {
+  color: var(--white100);
+  text-align: left;
+  align-self: self-start;
+  padding-bottom: 1rem;
+
+}
+
+.main-wrapper {
+  width: fit-content;
+  height: fit-content;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff44;
+  border-radius: 1.25rem;
+  margin-bottom: 100px;
+  max-width: 900px;
+}
+
+.banner-container {
+  border-radius: 3.4375rem;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.47);
+  display: flex;
+  height: 300px;
+  width: 700px;
+  max-width: 100%;
+  background-image: url(../image/banner.webp);
+  background-position: center;
+  background-position-y: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.songs-grid {
+  width: 100%;
+  height: fit-content;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: auto auto auto auto;
+  align-items: center;
+  justify-content:space-between;
+  margin-top: 50px;
+}
+
+.song {
+  width: 8.5rem;
+  height: fit-content;
+  color: var(--black200);
+  animation: slidein2;
+  animation-duration: 2s;
+}
+  
+.song-img:hover{
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  transition: 0.1s ease;
+}
+
+.song-img {
+  width: 100%;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.47);
+  border-radius: 1rem;
+}
+
+.details {
+  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+}
+
+.song-title-container {
+  font-size: 1.25rem;
+}
+
+.song-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: none;;
+  color: var(--black200);
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+.song-artist {
+  color: black;
+  font-size: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 400;
+}
+
+.song-artist:hover {
+  border-bottom: 3px solid white;
+  color: white;
+}
+
+
+
+@media only screen and (max-width: 800px) {
+  .songs-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+    margin-top: 50px;
+  }
+
+  .song {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    border-bottom: solid 1px white;
+    padding: 2px 0;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .song-img {
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+  }
+  
+  .song-title {
+    font-size: 1.25rem;
+  }
+  
+  .song-artist {
+    color: black;
+    font-size: 0.9rem;
+  }
+
+  .banner-container {
+    height: 200px;
+    width: 100%;
+  }
+
+  .main-wrapper {
+    width: 95%;
+    max-width: 600px;
+  }
+
+}
+

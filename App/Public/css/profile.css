@@ -1,0 +1,237 @@
+@import url('global.css');
+
+.container {
+  max-width: 100vw;
+  min-height: 100vh;
+  background-color: var(--blue100);
+  padding: 2rem;
+  color: var(--blue400);
+}
+
+.form {
+  margin-bottom: 5rem;
+}
+
+.wrapper {
+  margin-top: 4rem;
+  background-color: var(--blue350);
+  border-radius: 20px;
+  padding: 1rem;
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 600px;
+}
+
+.bio-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.bio {
+  width: 100%;
+  resize: vertical;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.604);
+  height: 100px;
+}
+
+.button-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.delete-account {
+  color:rgb(205, 205, 205);
+}
+
+.delete-account:hover {
+  color: #DB0000;
+}
+
+.p-message {
+  color: var(--yellow100);
+  font-size: 0.75rem;
+  padding-top:1rem;
+}
+
+.delete-container {
+  background-color: var(--yellow100);
+  padding: 3rem;
+  max-width: 600px;
+  margin-top: 3rem;
+  border-radius: 15px;
+  padding-bottom: 5rem;
+}
+
+.text {
+  padding-bottom: 4rem;
+}
+
+.wrapper-text {
+  display: flex;
+  height: fit-content;
+  justify-content: space-between;
+}
+
+.close-btn {
+  font-weight: 600;
+  color: var(--blue400);
+}
+
+.message-container {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  padding-top: 1rem;
+}
+
+.warning {
+  color: #BF1B1B;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.text-delete {
+  font-size: 0.85rem;
+}
+
+.delete-form {
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.delete-btn {
+  border-radius: 1rem;
+  background: grey;
+  color: white;
+  border: none;
+  padding: 0.5rem 2rem;
+}
+
+.confirm-delete-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.frame {
+  width: 150px;
+  height: 150px;
+  background-size: cover;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);  
+  border-radius: 5px;
+  transition: transform 0.3s;
+  position: relative;
+}
+
+.edit-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.274); /* Semi-transparent background to make it stand out */
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  color:white;
+}
+
+.frame:hover .edit-button {
+  display: flex; /* Show the edit button when .frame is hovered */
+  cursor: pointer;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.profile-wrapper {
+  display: flex;
+  width: 100%;
+  margin-bottom: 2rem;
+  flex-grow: 1;
+}
+
+.name-wrapper {
+  padding-left: 2rem;
+}
+
+.display-name {
+  background-color: transparent;
+  border:none;
+  font-size: 3rem;
+  color: var(--yellow100);
+  width: 100%;
+  border-bottom: 1px solid white;
+}
+
+textarea:focus, input:focus{
+  outline: none;
+}
+
+.username {
+  color: rgba(252, 252, 252, 0.505);
+}
+
+
+.cancel-btn {
+  background-color: transparent;
+  border: none;
+  padding: 0.3rem 1rem;
+  width: 150px;
+  margin-right: 1rem;
+  border-radius: 5px;
+  border: 2px var(--salmon100) solid;
+  color: var(--salmon100);
+}
+
+.save-btn {
+  background-color: var(--salmon100);
+  border: none;
+  padding: 0.3rem 1rem;
+  width: 150px;
+  border-radius: 5px;
+  text-align: center;
+  color: var(--blue400);
+}
+
+
+.delete-modal {
+  position: fixed;
+  z-index: 40;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100vw;
+  height: 100vh;
+display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+@media only screen and (max-width: 500px) {
+  .frame {
+    height: 100px;
+    width: 100px;
+  }
+
+  .display-name {
+    font-size: 2rem;
+  }
+  .container {
+    padding: 1rem;
+  }
+}

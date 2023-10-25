@@ -1,0 +1,172 @@
+@import "global.css";
+
+.container {
+  min-height: 100vh;
+  max-width: 100vw;
+  background: var(--blue100);
+}
+
+.main-container {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.a-artists-container {
+  padding: 1rem;
+  padding-top: 2rem;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 900px;
+}
+
+.a-buttons-container {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+}
+
+.a-btns {
+  background-color: transparent;
+  border: none;
+  padding-left: 1rem;
+}
+
+.artist-container {
+  width: 100%;
+  height: fit-content;
+  overflow-y: hidden;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: var(--blue50);
+  border-radius: 1.25rem;
+}
+
+.a-details-container {
+  display: flex;
+  max-width: 600px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.artists-wrapper {
+  width: 100%;
+}
+
+.a-detail-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+  /* overflow: hidden; */
+  /* text-overflow: ellipsis; */
+  white-space: wrap;
+}
+
+.divider {
+  width: 100%;
+  height: 2px;
+  background-color: var(--blue50);
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+
+.artist-cover {
+  width: 80px;
+  height: 80px;
+  border-radius: 0.625rem;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);  
+}
+
+.a-detail-artistname {
+  font-size: 1.3rem;
+  color:white;
+  font-weight: 600;
+}
+
+.detail-description {
+  color: white;
+  
+}
+
+.add-artist-container {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+.add-text {
+  color: white;
+  font-size: 1.4rem;
+}
+
+.add-artist {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+
+.add-btn {
+  width: 2.5rem;
+  margin-left: 1rem;
+}
+
+.pagination {
+  width: 100%;
+}
+
+@media only screen and (max-width:600px)  {
+  .a-detail-wrapper {
+    width: 150;
+    overflow: hidden;
+    margin-left: 1rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .artist-cover {
+    width: 70px;
+    height: 70px;
+  }
+
+  .a-detail-title {
+    font-size: 1rem;
+  }
+
+  .a-detail {
+    font-size: 0.75rem;
+  }
+
+  .a-icons {
+    width: 2rem;
+  }
+
+  .a-detail-artistname {
+    font-size: 1.2rem;
+  }
+
+  .a-detail-description {
+    display: none;
+  }
+
+  .artist-container {
+    align-items: center;
+    height: fit-content;
+  }
+}

@@ -1,0 +1,95 @@
+@import "global.css";
+
+.container {
+  min-height: 100vh;
+  max-width: 100vw;
+  background: var(--blue100);
+  padding-bottom: 120px;
+}
+
+.songs-container {
+  padding: 1rem;
+  padding-top: 8rem;
+  max-width: 800px;
+  height: fit-content;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  padding-bottom: 10rem;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.empty-message {
+  color: white;
+  padding: 1rem 3rem;
+  border-radius: 5px;
+}
+.buttons-container {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  background-color: transparent;
+  border: none;
+  padding-left: 1rem;
+}
+
+
+
+.song-container {
+  width: 100%;
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--blue50);
+  border-radius: 1.25rem;
+}
+
+.details-container {
+  display: flex;
+  width: 100%;
+}
+
+.detail-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 1rem;
+}
+
+.divider {
+  width: 100%;
+  height: 2px;
+  background-color: var(--blue50);
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+
+.song-cover {
+  width: 80px;
+  height: 80px;
+  border-radius: 0.625rem;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);  
+}
+
+.song-title {
+  font-size: 1.3rem;
+  color:white;
+  font-weight: 600;
+}
+
+.song-artist {
+  color: white;
+}
+
+@media only screen and (max-width:450px) {
+  
+}

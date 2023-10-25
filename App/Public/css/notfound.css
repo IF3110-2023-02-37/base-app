@@ -1,0 +1,17 @@
+@import "global.css";
+
+.container {
+  background-color: var(--blue100);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+
+.img404 {
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+}

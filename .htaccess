@@ -1,0 +1,9 @@
+Options -Indexes
+
+RewriteEngine On
+
+RewriteRule ^App/Public/css(.*)$ App/Public/css$1 [L]
+RewriteRule ^App/Public/image(.*)$ App/Public/image$1 [L]
+RewriteRule ^App/Public/audio(.*)$ App/Public/audio$1 [L]
+RewriteRule ^App/Public/js(.*)$ App/Public/js$1 [L]
+RewriteRule ^(.*)$ index.php?url=$1 [L,QSA]

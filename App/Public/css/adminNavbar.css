@@ -1,0 +1,52 @@
+@import url('global.css');
+
+.navbar-admin {
+  width: 10rem;
+  height: 100vh;
+  position: fixed;
+  background-color: var(--blue350);
+}
+
+.navbar-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.item-navbar-container {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1rem;
+}
+
+.item-navbar {
+  padding-top: 2rem;
+  color: white;
+}
+
+.logout {
+  margin-top: 65vh;
+  align-self: center;
+  color: #5D4C4C;
+  padding: 0.2rem 2rem;
+  background-color: var(--salmon100);
+  border: none;
+  border-radius: 20px;
+}
+
+.navbar-button {
+  position: fixed;
+  z-index: 30;
+  background-color: var(--blue350);
+  margin-top: 1rem;
+  margin-left: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 20px;
+}
+
+.navbar-icon {
+  width: 20px;
+}
