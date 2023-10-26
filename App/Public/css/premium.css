@@ -1,0 +1,81 @@
+@import "global.css";
+
+.container-premium {
+  min-height: 100vh;
+  width: 100vw;
+  background-color: var(--blue100);
+  display: flex;
+  justify-content: center;
+}
+
+.premium-card-container {
+  margin-top: 100px;
+  /* background-color: purple; */
+  width: 100%;
+  max-width: 800px;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  padding: 2rem;
+}
+
+.title-wrapper {
+  border-bottom: 2px white solid;
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--white100);
+}
+
+.card-premium {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 2.5rem;
+}
+
+.artist-name {
+  margin-right: 0.5rem;
+  color: rgb(243, 243, 243);
+}
+
+.status-request {
+  width: 120px;
+  text-align: center;
+  color: white;
+  border: 1px white solid;
+  border-radius: 1rem;
+  padding: 0.1rem 0;
+}
+
+.subscribe-btn {
+  background-color: var(--yellow100);
+  color: #BB937C;
+}
+
+.see-songs-btn {
+  color: #BB937C;
+}
+
+.artist-name-accepted {
+  color: white;
+  font-weight: bold;
+}
+
+.artist-name-accepted:hover {
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 500px) {
+  .card-premium {
+    padding: 0.5rem 0;
+  }
+
+  .premium-card-container {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  
+}

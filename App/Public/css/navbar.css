@@ -107,10 +107,9 @@
 
   .navbar-expand {
     width: 100%;
+    height: fit-content;
     display: flex;
     flex-direction: column;
-    align-items: start;
-    justify-content: start;
     border-radius: 10px;
     gap: 1rem;
   }
@@ -118,6 +117,7 @@
   .m-nav-item {
     padding-bottom: 1rem;
     color: rgba(255, 255, 255, 0.74);
+    padding-left: 1rem;
   }
   .m-nav-item:hover {
    color: white; 

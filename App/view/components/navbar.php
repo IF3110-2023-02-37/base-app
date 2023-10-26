@@ -17,8 +17,10 @@
     <div class="navbar-wrapper">
       <a href="/home" class="nav-home nav-item" aria-label="home page">Home</a>
       <a href="/library" class="nav-library nav-item" aria-label="library page">Library</a>
+      <a href="/premium" class="nav-premium nav-item" aria-label="premium page">Premium</a>
       <a href="/login/signout" class="nav-logout nav-item" aria-label="logout">Logout</a>
       <a href="/profile" class="nav-profile nav-item" aria-label="profile page"> <img src="<?php getProfile($data['profilePicture']) ?>" class="profile-img" id="profile-img-1" alt=""></a>
+      
     </div>
   </div>
 </div>
@@ -32,6 +34,7 @@
     <div class="navbar-expand" id="navbar-expand" style="display: none;">
       <a href="/home" class="nav-home m-nav-item" aria-label="home page">Home</a>
       <a href="/library" class="nav-library m-nav-item" aria-label="library page">Library</a>
+      <a href="/premium" class="nav-premium m-nav-item" aria-label="premium page">Premium</a>
       <a href="/login/signout" class="nav-logout m-nav-item" aria-label="logout">Logout</a>
     </div>
 

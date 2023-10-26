@@ -12,7 +12,7 @@
 </head>
 <body>
   <div class="container">
-  <div class="left-container">
+    <div class="left-container">
       <img src="App/Public/image/img1.png" class="img1" alt="">
     </div>
     
