@@ -1,0 +1,79 @@
+@import "global.css";
+
+.blur-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(1px);
+  position: fixed;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.review-container {
+  width: 100%;
+  max-width: 600px;
+  max-height: fit-content;
+  padding: 3rem 3rem 6rem 3rem;
+  background-color: var(--yellow100);
+  border-radius: 10px;
+}
+
+.review-container p {
+  color: #9B7862;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.review-area {
+  width: 100%;
+  resize: none;
+  height: fit-content;
+  border-radius: 10px;
+  border: none;
+  padding: 0.8rem;
+  margin-top: 1rem;
+}
+
+.rating-wrapper {
+  margin-top: 5px;
+}
+
+.rating {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.button-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  margin-top: 1rem;
+}
+
+.r-send-btn {
+  font-size: 1rem;
+  color: white;
+  border-radius: 1rem;
+  background: #ECC4AD;
+  padding: 0.2rem 1.5rem;
+  margin-left: 1rem;
+}
+
+.r-send-btn:hover {
+  background-color: #9B7862;
+}
+
+.r-cancel-btn {
+  color: #9B7862;
+  border-radius: 1rem;
+  padding: 0.2rem 1.5rem;
+}
+
+.r-cancel-btn:hover {
+  background-color: #ecc4ad43;
+  color: white;
+}

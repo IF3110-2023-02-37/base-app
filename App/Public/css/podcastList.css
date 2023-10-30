@@ -1,0 +1,165 @@
+@import url('global.css');
+
+.container-podcast {
+  min-height: 100vh;
+  max-width: 100vw;
+  background-color: var(--blue100);
+  display: flex;
+  justify-content: center;
+  
+}
+
+.wrapper-premium-songs {
+  margin-top: 100px;
+  /* background-color: purple; */
+  width: 100%;
+  max-width: 800px;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  padding: 2rem;
+
+}
+
+.artist-profile-container {
+  width: 100%;
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 1.25rem;
+}
+
+.artist-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 0.2rem;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); 
+  align-self: self-start;
+}
+
+
+.details-container {
+  display: flex;
+  width: 100%;
+}
+
+.artist-name {
+  color: #FFF;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.buttons-container {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  background-color: transparent;
+  border: none;
+  padding-left: 1rem;
+}
+
+.song-container {
+  width: 100%;
+  
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--blue50);
+  border-radius: 1.25rem;
+}
+
+.details-artist-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-left:1rem;
+}
+
+.detail-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 1rem;
+  color: white;
+}
+
+.divider {
+  width: 100%;
+  height: 2px;
+  background-color: var(--blue50);
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+
+.song-cover {
+  width: 70px;
+  height: 70px;
+  border-radius: 0.625rem;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);  
+}
+
+.podcaster-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 0.625rem;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); 
+  margin-right: 1rem; 
+}
+
+.info-up-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.info-sub-wrapper p {
+  color:white;
+}
+
+.p-title {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.p-date {
+  color:rgba(255, 255, 255, 0.781);
+  font-size: 0.8rem;
+}
+
+.info-sub-wrapper h1 {
+  color: var(--blue400)
+}
+
+.podcast-desc {
+  border-bottom: solid 2px var(--blue200);
+  padding-bottom: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+@media only screen and (max-width: 550px) {
+  .artist-description {
+    font-size: 0.7rem;
+  }
+
+  .artist-name {
+    font-size: 1.5rem;
+  }
+
+  .wrapper-premium-songs {
+    margin-left: 0rem;
+    margin-right: 0rem;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .song-cover {
+    display: none;
+  }
+}
