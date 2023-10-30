@@ -29,10 +29,16 @@
   color: var(--white100);
 }
 
-.card-premium {
+.card-podcast {
   display: flex;
   justify-content: space-between;
-  padding: 0.5rem 2.5rem;
+  padding: 0.5rem 0.5rem;
+  border-radius: 5px;
+}
+
+.card-podcast:hover {
+  background-color: var(--blue200);
+  cursor: pointer;
 }
 
 .artist-name {
@@ -47,6 +53,7 @@
   border: 1px white solid;
   border-radius: 1rem;
   padding: 0.1rem 0;
+  font-size: 0.9rem;
 }
 
 .subscribe-btn {
@@ -55,7 +62,8 @@
 }
 
 .see-songs-btn {
-  color: #BB937C;
+  color: #967764;
+  background-color: var(--salmon100);
 }
 
 .artist-name-accepted {
@@ -63,12 +71,13 @@
   font-weight: bold;
 }
 
-.artist-name-accepted:hover {
-  text-decoration: underline;
+.tagline {
+  color: white;
+  margin-bottom: 1rem;
 }
 
 @media only screen and (max-width: 500px) {
-  .card-premium {
+  .card-podcast {
     padding: 0.5rem 0;
   }
 
@@ -77,5 +86,8 @@
     margin-right: 0.5rem;
   }
 
+  .title {
+    font-size: 2.25rem;
+  }
   
 }
