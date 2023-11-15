@@ -1,5 +1,7 @@
 <?php 
   require_once "App/util/getter.php";
+  include("App/core/RestClient.php");
+  $podcaster = RestClient::request('GET', '/user/getPodcaster');
 ?>
 
 <!DOCTYPE html>
@@ -20,25 +22,20 @@
     $test = array(
       "artist1" => array(
           "name" => "Podkesmas",
-          "status" => "Pending",
-          "image" => "newjeans.jpg"
+          "status" => "Pending"
       ),
       "artist2" => array(
           "name" => "Rapot",
-          "status" => "None",
-          "image" => "coldplay.jpg"
+          "status" => "None"
       ),
       "artist3" => array(
           "name" => "BKR Brothers",
-          "status" => "Subscribed",
-          "image" => "blackpink.jpg"
+          "status" => "Subscribed"
       ),
       "artist4" => array(
           "name" => "Do You See What I See?",
-          "status" => "Rejected",
-          "image" => "tulus.jpg"
+          "status" => "Rejected"
       ),
-      // Add more elements as needed
   );  
   ?>
   <div class="container-premium">
@@ -53,10 +50,10 @@
       </div>
       <div class="list-podcast">
 
-        <?php foreach ($test as $t) {?>
-          <div class="card-podcast">
+        <!-- <?php foreach ($podcaster as $t) {?>
+          <div class="card-podcast <?php echo ($t['status'] === 'Subscribed') ? ' subscribed-card-podcast' : ''; ?>">
             <?php if ($t['status'] != "Accepted") {?>
-              <div class="artist-name"><?= $t['name']; ?></div>
+              <div class="artist-name"><?= $t['displaynName']; ?></div>
               <?php if ($t['status'] != "None") {?>
                 <div class="status-request"><?= $t['status']; ?></div>
               <?php } else {?>
@@ -67,7 +64,17 @@
               <div class="status-request"><?= $t['status']; ?></div>
             <?php } ?>
           </div>
+        <?php } ?> -->
+
+        <!-- blm selesai -->
+        <?php foreach ($podcaster as $t) {?>
+          <div class="subscribed-card-podcast">
+            <div class="artist-name"><a href="podcast/list" class="artist-name-accepted"><?= $t['displayName']; ?></a></div>
+            <div class="status-request">Accepted</div>
+          </div>
         <?php } ?>
+
+
       </div>
     </div>
 
