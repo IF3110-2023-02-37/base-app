@@ -1,7 +1,7 @@
 <?php 
   require_once "App/util/getter.php";
   include("App/core/RestClient.php");
-  $podcaster = RestClient::request('GET', '/user/getPodcaster');
+  $podcasters = RestClient::request('GET', '/user/getPodcaster');
 ?>
 
 <!DOCTYPE html>
@@ -18,26 +18,7 @@
 </head>
 <body>
 
-  <?php 
-    $test = array(
-      "artist1" => array(
-          "name" => "Podkesmas",
-          "status" => "Pending"
-      ),
-      "artist2" => array(
-          "name" => "Rapot",
-          "status" => "None"
-      ),
-      "artist3" => array(
-          "name" => "BKR Brothers",
-          "status" => "Subscribed"
-      ),
-      "artist4" => array(
-          "name" => "Do You See What I See?",
-          "status" => "Rejected"
-      ),
-  );  
-  ?>
+
   <div class="container-premium">
     <?php 
       include("App/view/components/navbar.php"); 
@@ -67,10 +48,11 @@
         <?php } ?> -->
 
         <!-- blm selesai -->
-        <?php foreach ($podcaster as $t) {?>
+        <?php foreach ($podcasters as $podcaster) {?>
           <div class="subscribed-card-podcast">
-            <div class="artist-name"><a href="podcast/list" class="artist-name-accepted"><?= $t['displayName']; ?></a></div>
-            <div class="status-request">Accepted</div>
+            <div class="artist-name"><a href="podcast/list?podcaster=<?= $podcaster['username']; ?>" class="artist-name-accepted"><?= $podcaster['displayName']; ?></a></div>
+            <a class="status-request" href="/podcast/list?podcaster=<?= $podcaster['username']; ?>">Accepted</a>
+
           </div>
         <?php } ?>
 

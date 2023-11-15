@@ -1,5 +1,10 @@
 <?php 
   require_once "App/util/getter.php";
+  include("App/core/RestClient.php");
+  $podcasterId = $data['podcasterId'];
+  $get = RestClient::request('GET', "/user/getDataPodcaster/$podcasterId");
+  $podcaster = $get['podcaster'];
+  $podcasts = $get['podcasts'];
 ?>
 
 <!DOCTYPE html>
@@ -16,17 +21,6 @@
   ?>
 </head>
 <body>
-  <?php
-  //dummy data 
-    $s = array(
-      'audio' => 'dummy.mp3',
-      'title' => 'Judul podcastnya',
-      'name'  => 'Podkesmas',
-      'coverImage' => 'supershy.png',
-      'songID' => "4",
-      'date' => "04/10/2023"
-    )
-  ?>
 
   <div class="container-podcast">
     <?php 
@@ -37,23 +31,23 @@
     <div class="wrapper-premium-songs">
       <div class="podcast-info-container">
         <div class="info-up-wrapper">
-          <img class="podcaster-img" src="<?php getArtistImg('tulus.jpg') ?>" alt="">
+          <img class="podcaster-img" src="<?php getProfile($podcaster['picture']) ?>" alt="">
           <div class="info-sub-wrapper">
             <p>Podcast by</p>
-            <h1>Podkesmas</h1>
+            <h1><?= $podcaster['displayName']; ?></h1>
           </div>
         </div>
-        <p class="podcast-desc">Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum facere ad cum? adipisicing elit. Sapiente aspernatur quibusdam distinctio. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor facere </p>
+        <p class="podcast-desc"><?= $podcaster['description']; ?></p>
       </div>
 
       <div class="list-songs">
-        <?php for($i = 0; $i < 10; $i++) { ?>
+        <?php foreach ($podcasts as $podcast) {?>
           <div class="song-container">
             <div class="details-container">
-              <img src="<?= getCover($s['coverImage']); ?>" class="song-cover" alt="" >
+              <img src="<?= getCover($podcast['picture']); ?>" class="song-cover" alt="" >
               <div class="detail-wrapper">
-                <p class="p-title"><?= $s['title']; ?></p>
-                <p class="p-date"><?= $s['date']; ?></p>
+                <p class="p-title"><?= $podcast['title']; ?></p>
+                <p class="p-date"><?= $podcast['date']; ?></p>
               </div>
             </div>
             <div class="buttons-container">
@@ -62,7 +56,7 @@
                 <img src="<?php getImg('add_comment.svg') ?>" alt="">
               </button>
               <button class="play-btn btn" onclick="
-                playSong(event, '<?= $s['audio']; ?>', '<?= $s['title']; ?>', '<?= $s['name']; ?>', '<?= $s['coverImage']; ?>','0', '<?= $s['songID']; ?>')
+                playSong(event, '<?= $podcast['audio']; ?>', '<?= $podcast['title']; ?>', '<?= $podcaster['displayName']; ?>', '<?= $podcast['picture']; ?>','0', '<?= $podcast['id']; ?>')
                 ">
                 <img src="<?php getImg('play.svg'); ?>" alt="">
               </button>

@@ -208,14 +208,13 @@ textarea:focus, input:focus{
   color: var(--blue400);
 }
 
-
 .delete-modal {
   position: fixed;
   z-index: 40;
   background-color: rgba(0, 0, 0, 0.4);
   width: 100vw;
   height: 100vh;
-display: flex;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
