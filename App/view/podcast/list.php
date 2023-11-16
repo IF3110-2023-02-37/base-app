@@ -52,7 +52,7 @@
             </div>
             <div class="buttons-container">
 
-              <button class="comment-btn btn" onclick="openReview(event)">
+              <button class="comment-btn btn" onclick="openReview(event, '<?= $podcast['id']; ?>', '<?= $podcaster['username']; ?>',  '<?= $_SESSION['username']; ?>')">
                 <img src="<?php getImg('add_comment.svg') ?>" alt="">
               </button>
               <button class="play-btn btn" onclick="
@@ -69,10 +69,13 @@
     </div>
   </div>
   <script defer>
-    function openReview(e) {
+    function openReview(e, id, podcaster, reviewer) {
       e.preventDefault(); 
-      document.getElementById('review-container').style.visibility = "visible";
-      // document.getElementById('review-container').style.display = "block";
+      const reviewContainer = document.getElementById('review-container');
+      reviewContainer.style.visibility = "visible";
+      reviewContainer.setAttribute('data-id', id);
+      reviewContainer.setAttribute('data-podcaster', podcaster);
+      reviewContainer.setAttribute('data-reviewer', reviewer);
     }
   </script>
 </body>
