@@ -1,6 +1,6 @@
 <?php 
   require_once "App/util/getter.php";
-  include("App/core/RestClient.php");
+  require_once "App/core/RestClient.php";
   $podcasterId = $data['podcasterId'];
   $get = RestClient::request('GET', "/user/getDataPodcaster/$podcasterId");
   $podcaster = $get['podcaster'];
@@ -21,7 +21,6 @@
   ?>
 </head>
 <body>
-
   <div class="container-podcast">
     <?php 
       include("App/view/components/navbar.php"); 
@@ -31,7 +30,7 @@
     <div class="wrapper-premium-songs">
       <div class="podcast-info-container">
         <div class="info-up-wrapper">
-          <img class="podcaster-img" src="<?php getProfile($podcaster['picture']) ?>" alt="">
+          <img class="podcaster-img" src="<?= getPodcasterProfile($podcaster['picture']) ?>" alt="">
           <div class="info-sub-wrapper">
             <p>Podcast by</p>
             <h1><?= $podcaster['displayName']; ?></h1>
@@ -41,10 +40,11 @@
       </div>
 
       <div class="list-songs">
+        <img src="<?= $test; ?>" alt="">
         <?php foreach ($podcasts as $podcast) {?>
           <div class="song-container">
             <div class="details-container">
-              <img src="<?= getCover($podcast['picture']); ?>" class="song-cover" alt="" >
+              <img src="<?= getPodcastCover($podcast['picture']); ?>" class="song-cover" alt="" >
               <div class="detail-wrapper">
                 <p class="p-title"><?= $podcast['title']; ?></p>
                 <p class="p-date"><?= $podcast['date']; ?></p>
@@ -56,7 +56,7 @@
                 <img src="<?php getImg('add_comment.svg') ?>" alt="">
               </button>
               <button class="play-btn btn" onclick="
-                playSong(event, '<?= $podcast['audio']; ?>', '<?= $podcast['title']; ?>', '<?= $podcaster['displayName']; ?>', '<?= $podcast['picture']; ?>','0', '<?= $podcast['id']; ?>')
+                playPodcast(event, '<?= $podcast['audio']; ?>', '<?= $podcast['title']; ?>', '<?= $podcaster['displayName']; ?>', '<?= $podcast['picture']; ?>','0', '<?= $podcast['id']; ?>')
                 ">
                 <img src="<?php getImg('play.svg'); ?>" alt="">
               </button>

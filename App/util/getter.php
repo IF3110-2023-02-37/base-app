@@ -27,3 +27,12 @@
     function getProfile($image) {
         echo "http://localhost/App/Public/image/profile/" . $image;
     }
+
+    function getPodcastCover($image) {
+        return "http://localhost:3000/cover/$image";
+    }
+
+
+    function getPodcasterProfile($image) {
+        return "http://localhost:3000/profile/$image";
+    }

@@ -77,3 +77,45 @@ function likeSong(event, username) {
   }
 }
 
+function playPodcast(event, songPath, title, name, cover,  liked, songID) {
+  event.preventDefault();
+  const playerContainer = document.getElementById('player-container');
+  if (playerContainer.style.visibility === "hidden") {
+    playerContainer.style.visibility = "visible";
+  } 
+  
+  const address = "http://localhost:3000/";
+  const audioPlayer = document.getElementById('audioPlayer');
+  const audioSource = document.getElementById('audioSource');
+  const likeIcon = document.getElementById('like-icon');
+
+  let playingArtist = document.getElementById('playing-artist');
+  let artistName = name.split(" ").join("+");
+  console.log(artistName);
+  playingArtist.href= "#";
+  likeIcon.style.display = "none";
+  
+
+  const playingTitleElement = document.getElementById('playing-title');
+  playingTitleElement.setAttribute('data-id', songID);
+  console.log(songID);
+  document.getElementById('playing-title').textContent  = title;
+  document.getElementById('playing-artist').textContent  = name;
+  document.getElementById('playing-image').src  = address + "cover/" +  cover;
+  
+  songPath = address + "audio/" + songPath;
+  if (currentSong !== songPath) {
+    audioSource.src = songPath;
+    audioPlayer.load();
+    audioPlayer.play();
+    currentSong = songPath;
+  } else {
+    // If the same song is clicked again, pause it
+    if (audioPlayer.paused) {
+      audioPlayer.play();
+    } else {
+      audioPlayer.pause();
+    }
+  }
+}
+
