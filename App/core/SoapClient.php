@@ -1,6 +1,6 @@
 <?php
 
-class RestClient {
+class SoapClient {
     private static $baseUrl = "http://host.docker.internal:8091/subscription";
     private static $apikey = "gB9ACm8r5RZOBiN5ske9cBVjlVf";
 
