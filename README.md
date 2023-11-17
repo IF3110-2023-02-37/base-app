@@ -73,6 +73,18 @@ docker compose up
 ![Artist-page](/Screenshots/artist-control.jpg)
 ![Artist-page](/Screenshots/artist-control2.jpg)
 
+# E. Fitur Tambahan
+
+## Podcast Subscription
+![Subscription](/Screenshots/podcast.jpg)
+
+## Detail Podcast
+![Podcast](/Screenshots//podcastdetail.jpg)
+
+## Feedback
+![Feedback](/Screenshots/feedback.jpg)
+
+
 # Pembagian Tugas
 
 ## Client-Side
@@ -90,6 +102,9 @@ docker compose up
 - All responsive: 13521120
 - Lo-fi design: 13521050, 13521168
 - Hi-fi design: 13521120
+- Podcast Subscription: 13521120
+- Detail Podcast: 13521120
+- Feedback: 13521120
 
 
 ## Server-side
@@ -103,3 +118,6 @@ docker compose up
 - CRUD music: 13521120, 13521050
 - CRUD artist: 13521120
 - Init database & docker: 13521050
+- Podcast Subscription: 13521120, 13521168
+- Detail Podcast: 13521120, 13521168
+- Feedback: 13521120

@@ -18,7 +18,31 @@
 </head>
 <body>
 
-
+<?php 
+    $test = array(
+      "artist1" => array(
+          "name" => "Podkesmas",
+          "status" => "Pending",
+          "image" => "newjeans.jpg"
+      ),
+      "artist2" => array(
+          "name" => "Rapot",
+          "status" => "None",
+          "image" => "coldplay.jpg"
+      ),
+      "artist3" => array(
+          "name" => "BKR Brothers",
+          "status" => "Subscribed",
+          "image" => "blackpink.jpg"
+      ),
+      "artist4" => array(
+          "name" => "Do You See What I See?",
+          "status" => "Rejected",
+          "image" => "tulus.jpg"
+      ),
+      // Add more elements as needed
+  );  
+  ?>
   <div class="container-premium">
     <?php 
       include("App/view/components/navbar.php"); 
@@ -31,10 +55,10 @@
       </div>
       <div class="list-podcast">
 
-        <!-- <?php foreach ($podcaster as $t) {?>
+        <!-- <?php foreach ($test as $t) {?>
           <div class="card-podcast <?php echo ($t['status'] === 'Subscribed') ? ' subscribed-card-podcast' : ''; ?>">
             <?php if ($t['status'] != "Accepted") {?>
-              <div class="artist-name"><?= $t['displaynName']; ?></div>
+              <div class="artist-name"><?= $t['name']; ?></div>
               <?php if ($t['status'] != "None") {?>
                 <div class="status-request"><?= $t['status']; ?></div>
               <?php } else {?>
